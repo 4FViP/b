@@ -17,7 +17,7 @@ if not db.get('ban_list'):
 if not db.get('sessions'):
   db.set('sessions', [])
 if not db.get('force'):
-  db.set('force', ['xLxLxLrr3'])
+  db.set('force', ['eni100100'])
 x = Client(name='loclhosst', api_id=Config.APP_ID, api_hash=Config.API_HASH, bot_token=tok, workers=20, plugins=p, parse_mode=enums.ParseMode.DEFAULT)
 
 x.run()
