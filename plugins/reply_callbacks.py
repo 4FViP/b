@@ -90,8 +90,7 @@ async def b(app, query):
         '''
         return await query.edit_message_text(k, reply_markup=mk([[btn(f'- @{i} .', url=f't.me/{i}')]]))
     rk  = """
-⥃ لشراء الرصيد من بوت الخدمات 
-- @BxxBxxL
+حسنا سيدي يمكنك الآن التواصل معي ،الان قم بارسال المشكله فقط وانا اقوم برد عليك قريبا،
     """
     keys = mk(
         [
@@ -122,7 +121,7 @@ async def transs(app, query):
     try:
         ids = int(ask1.text)
     except:
-        await ask1.reply("تأكد يكون رقم!!، عيد العملية..")
+        await ask1.reply("قيد الانتظار... ")
         return
     if not db.exists(f'user_{ids}'):
         keys = mk(
@@ -130,7 +129,7 @@ async def transs(app, query):
             [btn('رجوع', 'back_home')]
         ]
     )
-        await ask1.reply("عذراً، هذا الايدي مو موجود ضمن بياناتنا", reply_markup=keys)
+        await ask1.reply("قيد الانتظار...", reply_markup=keys)
         return
     else:
         keys = mk(

@@ -32,17 +32,13 @@ async def startm(app, msg):
         coin = db.get(f'user_{user_id}')['coins']
         keys = mk(
         [
-            [btn(text='رصيدي: {:,} IQD'.format(coin), callback_data='lol')],
-            [btn(text='⦅ قسم الخدمات ⦆', callback_data='service')],
-            [btn(text='⦅ تجميع الرصيد ⦆', callback_data='invite'), btn(text='⦅ شراء الرصيد ⦆', callback_data='buy')],
-            [btn(text='⦅ معلومات حسابك ⦆', callback_data='account'), btn(text='⦅ تحويل الرصيد ⦆', callback_data='trans')],
-            [btn(text='قناة التحديثات', url='http://t.me/xLxLxLrr3')]
+            [btn(text='- يمكنك التواصل معي الان...', callback_data='trans')],
         ]
     )
         rk = f'''
-⥃ مرحبا بك عزيزي في بوت خدمات رنثون | الخدمات ♯ 
-هنالك نوعين من الخدمات العادي و الـ ViP ✰
-⥃ البوت يتميز بسرعة تنفيذ الطلبات ⥉
++ رابط المنصه 👇👇.
+https://eniss.dad/?ref=q06FGf
+- إذا تواجه مشاكل يمكنك التواصل معي
 الـ 𝚒𝚍 الخاص بك ⥃ {msg.from_user.id}
         '''
         await app.send_message(msg.from_user.id,rk, reply_markup=keys)
@@ -58,17 +54,13 @@ async def startm(app, msg):
         coin = db.get(f'user_{user_id}')['coins']
         keys = mk(
         [
-            [btn(text='رصيدك: :,{} IQD'.format(coin), callback_data='none')],
-            [btn(text='قسم خدمات الرشق', callback_data='service')],
-            [btn(text='تجميع رصيد', callback_data='invite'), btn(text='شراء رصيد', callback_data='buy')],
-            [btn(text='معلومات حسابك', callback_data='account'), btn(text='تحويل رصيد', callback_data='trans')],
-            [btn(text='قناة التحديثات', url='https://t.me/xLxLxLrr3')]
+            [btn(text='- يمكنك التواصل معي الان...', callback_data='trans')],
         ]
     )
         rk =f'''
-⥃ مرحبا بك عزيزي في بوت خدمات رنثون | الخدمات ♯ 
-هنالك نوعين من الخدمات العادي و الـ ViP ✰
-⥃ البوت يتميز بسرعة تنفيذ الطلبات ⥉
++ رابط المنصه 👇👇.
+https://eniss.dad/?ref=q06FGf
+- إذا تواجه مشاكل يمكنك التواصل معي
 الـ 𝚒𝚍 الخاص بك ⥃ {msg.from_user.id}
         '''
         await app.send_message(msg.from_user.id,rk, reply_markup=keys)
